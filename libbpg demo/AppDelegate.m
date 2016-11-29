@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "libbpg.h"
 
 @interface AppDelegate ()
 
@@ -15,75 +14,39 @@
 
 @implementation AppDelegate
 
-- (void)bpgViewInit
-{
-    BPGDecoderContext *img;
-    
-    NSString *bpgPath = [[NSBundle mainBundle] pathForResource:@"test.bpg" ofType:@""];
-    NSData *bpgData = [NSData dataWithContentsOfFile:bpgPath];
-    
-    img = bpg_decoder_open();
-    
-    if (bpg_decoder_decode(img, [bpgData bytes], [bpgData length]) < 0)
-    {
-        NSLog(@"Could not decode image");
-        return;
-    }
-    
-    BPGImageInfo img_info_s, *img_info = &img_info_s;
-    bpg_decoder_get_info(img, img_info);
-    
-    bpg_decoder_start(img, BPG_OUTPUT_FORMAT_RGBA32);
-    
-    unsigned int rowWidth = img_info->width * 4;
-    NSMutableData *pixData = [[NSMutableData alloc] initWithCapacity:rowWidth * img_info->height];
-    
-    unsigned char *pixbuf = [pixData mutableBytes];
-    unsigned char *row = pixbuf;
-    for (int y = 0; y < img_info->height; y++)
-    {
-        bpg_decoder_get_line(img, row);
-        row += rowWidth;
-    }
-    
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef ctx = CGBitmapContextCreate(pixbuf, img_info->width, img_info->height, 8, rowWidth, colorSpace, (CGBitmapInfo)kCGImageAlphaNoneSkipLast);
-    
-    if (!ctx)
-    {
-        NSLog(@"error creating UIImage");
-        return;
-    }
-    CGImageRef imageRef = CGBitmapContextCreateImage(ctx);
-    UIImage* rawImage = [UIImage imageWithCGImage:imageRef];
-    
-    CGContextRelease(ctx);
-    
-    bpg_decoder_close(img);
-    
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:rawImage];
-    [self.window.rootViewController.view addSubview:imageView];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self bpgViewInit];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
+
 - (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
+
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
+
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
+
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
 @end
+

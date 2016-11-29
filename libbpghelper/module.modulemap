@@ -1,0 +1,5 @@
+framework module BPGHelper {
+    umbrella header "COImage+BPG.h"
+    export *
+    module * { export * }
+}

@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  libbpg demo
+//  BGPDemo
 //
-//  Created by Jason Gorski on 2014-12-11.
-//  Copyright (c) 2014 jgorski. All rights reserved.
+//  Created by hpking　 on 2016/11/29.
+//  Copyright © 2016年 hpking　. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

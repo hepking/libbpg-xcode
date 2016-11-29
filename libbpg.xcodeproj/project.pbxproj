@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16E127B01DED853F003F0E1E /* animation.bpg in Resources */ = {isa = PBXBuildFile; fileRef = 16E127AA1DED820E003F0E1E /* animation.bpg */; };
+		16E127B11DED853F003F0E1E /* cinemagraph.bpg in Resources */ = {isa = PBXBuildFile; fileRef = 16E127AB1DED820E003F0E1E /* cinemagraph.bpg */; };
+		16E127BE1DED8C63003F0E1E /* libbpghelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E127B71DED8C63003F0E1E /* libbpghelper.framework */; };
+		16E127BF1DED8C63003F0E1E /* libbpghelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 16E127B71DED8C63003F0E1E /* libbpghelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		16E127C51DED8C9E003F0E1E /* COImage+BPG.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E127C31DED8C9E003F0E1E /* COImage+BPG.h */; };
+		16E127C61DED8C9E003F0E1E /* COImage+BPG.mm in Sources */ = {isa = PBXBuildFile; fileRef = 16E127C41DED8C9E003F0E1E /* COImage+BPG.mm */; };
+		16E127C71DED8CDD003F0E1E /* libbpgdec_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DADF31A399FB100BE1B3B /* libbpgdec_ios.framework */; };
+		16E127C81DED8CE6003F0E1E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E127A41DED7E64003F0E1E /* CoreGraphics.framework */; };
+		16E127C91DED8CEE003F0E1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E127A61DED7E7E003F0E1E /* UIKit.framework */; };
 		265DAC5E1A399D4E00BE1B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DAC5D1A399D4E00BE1B3B /* main.m */; };
 		265DAC611A399D4E00BE1B3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DAC601A399D4E00BE1B3B /* AppDelegate.m */; };
 		265DAC641A399D4E00BE1B3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DAC631A399D4E00BE1B3B /* ViewController.m */; };
@@ -14,12 +23,10 @@
 		265DAC691A399D4E00BE1B3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265DAC681A399D4E00BE1B3B /* Images.xcassets */; };
 		265DAC6C1A399D4E00BE1B3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265DAC6A1A399D4E00BE1B3B /* LaunchScreen.xib */; };
 		265DADF81A399FB200BE1B3B /* libbpgdec_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 265DADF71A399FB200BE1B3B /* libbpgdec_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		265DADFE1A399FB200BE1B3B /* libbpgdec_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DADF31A399FB100BE1B3B /* libbpgdec_ios.framework */; };
 		265DAE0A1A399FB200BE1B3B /* libbpgdec_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DADF31A399FB100BE1B3B /* libbpgdec_ios.framework */; };
 		265DAE0B1A399FB200BE1B3B /* libbpgdec_ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 265DADF31A399FB100BE1B3B /* libbpgdec_ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		265DAE191A399FCD00BE1B3B /* libbpgenc_ios.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 265DAE181A399FCD00BE1B3B /* libbpgenc_ios.h */; };
 		265DAE1B1A399FCD00BE1B3B /* libbpgenc_ios.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DAE1A1A399FCD00BE1B3B /* libbpgenc_ios.m */; };
-		265DAE211A399FCD00BE1B3B /* liblibbpgenc_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 265DAE161A399FCC00BE1B3B /* liblibbpgenc_ios.a */; };
 		265DAE301A39A07600BE1B3B /* libbpg.c in Sources */ = {isa = PBXBuildFile; fileRef = 265DADE91A399EBA00BE1B3B /* libbpg.c */; };
 		265DAE311A39A07700BE1B3B /* libbpg.c in Sources */ = {isa = PBXBuildFile; fileRef = 265DADE91A399EBA00BE1B3B /* libbpg.c */; };
 		265DAE321A39A11500BE1B3B /* frame.c in Sources */ = {isa = PBXBuildFile; fileRef = 265DADB11A399EBA00BE1B3B /* frame.c */; };
@@ -301,26 +308,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		265DAC721A399D4E00BE1B3B /* PBXContainerItemProxy */ = {
+		16E127BC1DED8C63003F0E1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 261FE69F1A399CA000483851 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 265DAC581A399D4E00BE1B3B;
-			remoteInfo = "libbpg demo";
-		};
-		265DADFF1A399FB200BE1B3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 261FE69F1A399CA000483851 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 265DADF21A399FB100BE1B3B;
-			remoteInfo = libbpgdec_ios;
-		};
-		265DAE011A399FB200BE1B3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 261FE69F1A399CA000483851 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 265DAC581A399D4E00BE1B3B;
-			remoteInfo = "libbpg demo";
+			remoteGlobalIDString = 16E127B61DED8C63003F0E1E;
+			remoteInfo = libbpghelper;
 		};
 		265DAE081A399FB200BE1B3B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -328,13 +321,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 265DADF21A399FB100BE1B3B;
 			remoteInfo = libbpgdec_ios;
-		};
-		265DAE221A399FCD00BE1B3B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 261FE69F1A399CA000483851 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 265DAE151A399FCC00BE1B3B;
-			remoteInfo = libbpgenc_ios;
 		};
 		269FFB4F1A48CE8700EBC867 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -360,6 +346,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				265DAE0B1A399FB200BE1B3B /* libbpgdec_ios.framework in Embed Frameworks */,
+				16E127BF1DED8C63003F0E1E /* libbpghelper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +382,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		16E127A41DED7E64003F0E1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		16E127A61DED7E7E003F0E1E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		16E127AA1DED820E003F0E1E /* animation.bpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = animation.bpg; sourceTree = "<group>"; };
+		16E127AB1DED820E003F0E1E /* cinemagraph.bpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = cinemagraph.bpg; sourceTree = "<group>"; };
+		16E127B71DED8C63003F0E1E /* libbpghelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libbpghelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16E127BA1DED8C63003F0E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16E127C31DED8C9E003F0E1E /* COImage+BPG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "COImage+BPG.h"; sourceTree = "<group>"; };
+		16E127C41DED8C9E003F0E1E /* COImage+BPG.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "COImage+BPG.mm"; sourceTree = "<group>"; };
 		265DAC591A399D4E00BE1B3B /* libbpg demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "libbpg demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265DAC5C1A399D4E00BE1B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265DAC5D1A399D4E00BE1B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -405,7 +400,6 @@
 		265DAC661A399D4E00BE1B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		265DAC681A399D4E00BE1B3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		265DAC6B1A399D4E00BE1B3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		265DAC711A399D4E00BE1B3B /* libbpg demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "libbpg demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265DACE61A399EBA00BE1B3B /* bpgdec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bpgdec.c; sourceTree = "<group>"; };
 		265DACE71A399EBA00BE1B3B /* bpgenc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bpgenc.c; sourceTree = "<group>"; };
 		265DACE81A399EBA00BE1B3B /* bpgenc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bpgenc.h; sourceTree = "<group>"; };
@@ -662,11 +656,9 @@
 		265DADF31A399FB100BE1B3B /* libbpgdec_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libbpgdec_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		265DADF61A399FB200BE1B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265DADF71A399FB200BE1B3B /* libbpgdec_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libbpgdec_ios.h; sourceTree = "<group>"; };
-		265DADFD1A399FB200BE1B3B /* libbpgdec_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libbpgdec_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		265DAE161A399FCC00BE1B3B /* liblibbpgenc_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibbpgenc_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		265DAE181A399FCD00BE1B3B /* libbpgenc_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libbpgenc_ios.h; sourceTree = "<group>"; };
 		265DAE1A1A399FCD00BE1B3B /* libbpgenc_ios.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libbpgenc_ios.m; sourceTree = "<group>"; };
-		265DAE201A399FCD00BE1B3B /* libbpgenc_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libbpgenc_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		265DAEFC1A39A79400BE1B3B /* bpgenc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bpgenc; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A226011A3A1D9B008D8663 /* bpgdec */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bpgdec; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A226241A3AF82B008D8663 /* test.bpg */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.bpg; sourceTree = "<group>"; };
@@ -724,19 +716,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		16E127B31DED8C63003F0E1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16E127C91DED8CEE003F0E1E /* UIKit.framework in Frameworks */,
+				16E127C81DED8CE6003F0E1E /* CoreGraphics.framework in Frameworks */,
+				16E127C71DED8CDD003F0E1E /* libbpgdec_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		265DAC561A399D4E00BE1B3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				26A2261E1A3A1FCB008D8663 /* liblibbpgenc_ios.a in Frameworks */,
+				16E127BE1DED8C63003F0E1E /* libbpghelper.framework in Frameworks */,
 				265DAE0A1A399FB200BE1B3B /* libbpgdec_ios.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		265DAC6E1A399D4E00BE1B3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,26 +743,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		265DADFA1A399FB200BE1B3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				265DADFE1A399FB200BE1B3B /* libbpgdec_ios.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		265DAE131A399FCC00BE1B3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		265DAE1D1A399FCD00BE1B3B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				265DAE211A399FCD00BE1B3B /* liblibbpgenc_ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,17 +776,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16E127A31DED7E64003F0E1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16E127A61DED7E7E003F0E1E /* UIKit.framework */,
+				16E127A41DED7E64003F0E1E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		16E127B81DED8C63003F0E1E /* libbpghelper */ = {
+			isa = PBXGroup;
+			children = (
+				16E127C31DED8C9E003F0E1E /* COImage+BPG.h */,
+				16E127C41DED8C9E003F0E1E /* COImage+BPG.mm */,
+				16E127BA1DED8C63003F0E1E /* Info.plist */,
+			);
+			path = libbpghelper;
+			sourceTree = "<group>";
+		};
 		261FE69E1A399CA000483851 = {
 			isa = PBXGroup;
 			children = (
 				4EA848E21C1C7FAF00EB2416 /* deps */,
 				265DACE51A399E7F00BE1B3B /* libbpg */,
-				265DAC5A1A399D4E00BE1B3B /* libbpg demo */,
+				265DAC5A1A399D4E00BE1B3B /* libbpgDemo */,
 				265DADF41A399FB200BE1B3B /* libbpgdec_ios */,
 				265DAE171A399FCC00BE1B3B /* libbpgenc_ios */,
 				265DAEFD1A39A79400BE1B3B /* bpgenc */,
 				26A226021A3A1D9B008D8663 /* bpgdec */,
+				16E127B81DED8C63003F0E1E /* libbpghelper */,
 				261FE6A91A399CA000483851 /* Products */,
+				16E127A31DED7E64003F0E1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -814,19 +815,17 @@
 			isa = PBXGroup;
 			children = (
 				265DAC591A399D4E00BE1B3B /* libbpg demo.app */,
-				265DAC711A399D4E00BE1B3B /* libbpg demoTests.xctest */,
 				265DADF31A399FB100BE1B3B /* libbpgdec_ios.framework */,
-				265DADFD1A399FB200BE1B3B /* libbpgdec_iosTests.xctest */,
 				265DAE161A399FCC00BE1B3B /* liblibbpgenc_ios.a */,
-				265DAE201A399FCD00BE1B3B /* libbpgenc_iosTests.xctest */,
 				265DAEFC1A39A79400BE1B3B /* bpgenc */,
 				26A226011A3A1D9B008D8663 /* bpgdec */,
 				26ECDFB71A4887B70092EE5C /* liblibbpgdec.a */,
+				16E127B71DED8C63003F0E1E /* libbpghelper.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		265DAC5A1A399D4E00BE1B3B /* libbpg demo */ = {
+		265DAC5A1A399D4E00BE1B3B /* libbpgDemo */ = {
 			isa = PBXGroup;
 			children = (
 				265DAC5F1A399D4E00BE1B3B /* AppDelegate.h */,
@@ -838,12 +837,15 @@
 				265DAC6A1A399D4E00BE1B3B /* LaunchScreen.xib */,
 				265DAC5B1A399D4E00BE1B3B /* Supporting Files */,
 			);
+			name = libbpgDemo;
 			path = "libbpg demo";
 			sourceTree = "<group>";
 		};
 		265DAC5B1A399D4E00BE1B3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16E127AA1DED820E003F0E1E /* animation.bpg */,
+				16E127AB1DED820E003F0E1E /* cinemagraph.bpg */,
 				26A226241A3AF82B008D8663 /* test.bpg */,
 				265DAC5C1A399D4E00BE1B3B /* Info.plist */,
 				265DAC5D1A399D4E00BE1B3B /* main.m */,
@@ -1283,6 +1285,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		16E127B41DED8C63003F0E1E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16E127C51DED8C9E003F0E1E /* COImage+BPG.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		265DADF01A399FB100BE1B3B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1301,6 +1311,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		16E127B61DED8C63003F0E1E /* libbpghelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16E127C01DED8C63003F0E1E /* Build configuration list for PBXNativeTarget "libbpghelper" */;
+			buildPhases = (
+				16E127B21DED8C63003F0E1E /* Sources */,
+				16E127B31DED8C63003F0E1E /* Frameworks */,
+				16E127B41DED8C63003F0E1E /* Headers */,
+				16E127B51DED8C63003F0E1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libbpghelper;
+			productName = libbpghelper;
+			productReference = 16E127B71DED8C63003F0E1E /* libbpghelper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		265DAC581A399D4E00BE1B3B /* libbpg demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265DAC791A399D4E00BE1B3B /* Build configuration list for PBXNativeTarget "libbpg demo" */;
@@ -1315,29 +1343,12 @@
 			dependencies = (
 				26A2261D1A3A1FC4008D8663 /* PBXTargetDependency */,
 				265DAE091A399FB200BE1B3B /* PBXTargetDependency */,
+				16E127BD1DED8C63003F0E1E /* PBXTargetDependency */,
 			);
 			name = "libbpg demo";
 			productName = "libbpg demo";
 			productReference = 265DAC591A399D4E00BE1B3B /* libbpg demo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		265DAC701A399D4E00BE1B3B /* libbpg demoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 265DAC7C1A399D4E00BE1B3B /* Build configuration list for PBXNativeTarget "libbpg demoTests" */;
-			buildPhases = (
-				265DAC6D1A399D4E00BE1B3B /* Sources */,
-				265DAC6E1A399D4E00BE1B3B /* Frameworks */,
-				265DAC6F1A399D4E00BE1B3B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				265DAC731A399D4E00BE1B3B /* PBXTargetDependency */,
-			);
-			name = "libbpg demoTests";
-			productName = "libbpg demoTests";
-			productReference = 265DAC711A399D4E00BE1B3B /* libbpg demoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		265DADF21A399FB100BE1B3B /* libbpgdec_ios */ = {
 			isa = PBXNativeTarget;
@@ -1357,25 +1368,6 @@
 			productReference = 265DADF31A399FB100BE1B3B /* libbpgdec_ios.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		265DADFC1A399FB200BE1B3B /* libbpgdec_iosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 265DAE0F1A399FB200BE1B3B /* Build configuration list for PBXNativeTarget "libbpgdec_iosTests" */;
-			buildPhases = (
-				265DADF91A399FB200BE1B3B /* Sources */,
-				265DADFA1A399FB200BE1B3B /* Frameworks */,
-				265DADFB1A399FB200BE1B3B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				265DAE001A399FB200BE1B3B /* PBXTargetDependency */,
-				265DAE021A399FB200BE1B3B /* PBXTargetDependency */,
-			);
-			name = libbpgdec_iosTests;
-			productName = libbpgdec_iosTests;
-			productReference = 265DADFD1A399FB200BE1B3B /* libbpgdec_iosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		265DAE151A399FCC00BE1B3B /* libbpgenc_ios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265DAE271A399FCD00BE1B3B /* Build configuration list for PBXNativeTarget "libbpgenc_ios" */;
@@ -1392,24 +1384,6 @@
 			productName = libbpgenc_ios;
 			productReference = 265DAE161A399FCC00BE1B3B /* liblibbpgenc_ios.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		265DAE1F1A399FCD00BE1B3B /* libbpgenc_iosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 265DAE2A1A399FCD00BE1B3B /* Build configuration list for PBXNativeTarget "libbpgenc_iosTests" */;
-			buildPhases = (
-				265DAE1C1A399FCD00BE1B3B /* Sources */,
-				265DAE1D1A399FCD00BE1B3B /* Frameworks */,
-				265DAE1E1A399FCD00BE1B3B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				265DAE231A399FCD00BE1B3B /* PBXTargetDependency */,
-			);
-			name = libbpgenc_iosTests;
-			productName = libbpgenc_iosTests;
-			productReference = 265DAE201A399FCD00BE1B3B /* libbpgenc_iosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		265DAEFB1A39A79400BE1B3B /* bpgenc */ = {
 			isa = PBXNativeTarget;
@@ -1469,28 +1443,25 @@
 		261FE69F1A399CA000483851 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = jgorski;
 				TargetAttributes = {
+					16E127B61DED8C63003F0E1E = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8WEA55D565;
+						ProvisioningStyle = Automatic;
+					};
 					265DAC581A399D4E00BE1B3B = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 8WEA55D565;
 					};
-					265DAC701A399D4E00BE1B3B = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 265DAC581A399D4E00BE1B3B;
-					};
 					265DADF21A399FB100BE1B3B = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					265DADFC1A399FB200BE1B3B = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 265DAC581A399D4E00BE1B3B;
-					};
 					265DAE151A399FCC00BE1B3B = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					265DAE1F1A399FCD00BE1B3B = {
 						CreatedOnToolsVersion = 6.1;
 					};
 					265DAEFB1A39A79400BE1B3B = {
@@ -1518,34 +1489,34 @@
 			projectRoot = "";
 			targets = (
 				265DAC581A399D4E00BE1B3B /* libbpg demo */,
-				265DAC701A399D4E00BE1B3B /* libbpg demoTests */,
 				265DADF21A399FB100BE1B3B /* libbpgdec_ios */,
-				265DADFC1A399FB200BE1B3B /* libbpgdec_iosTests */,
 				265DAE151A399FCC00BE1B3B /* libbpgenc_ios */,
-				265DAE1F1A399FCD00BE1B3B /* libbpgenc_iosTests */,
 				265DAEFB1A39A79400BE1B3B /* bpgenc */,
 				26A226001A3A1D9B008D8663 /* bpgdec */,
 				26ECDFB61A4887B70092EE5C /* libbpgdec */,
+				16E127B61DED8C63003F0E1E /* libbpghelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		16E127B51DED8C63003F0E1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		265DAC571A399D4E00BE1B3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E127B01DED853F003F0E1E /* animation.bpg in Resources */,
+				16E127B11DED853F003F0E1E /* cinemagraph.bpg in Resources */,
 				265DAC671A399D4E00BE1B3B /* Main.storyboard in Resources */,
 				265DAC6C1A399D4E00BE1B3B /* LaunchScreen.xib in Resources */,
 				265DAC691A399D4E00BE1B3B /* Images.xcassets in Resources */,
 				26A226251A3AF82B008D8663 /* test.bpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		265DAC6F1A399D4E00BE1B3B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1556,23 +1527,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		265DADFB1A399FB200BE1B3B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		265DAE1E1A399FCD00BE1B3B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		16E127B21DED8C63003F0E1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16E127C61DED8C9E003F0E1E /* COImage+BPG.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		265DAC551A399D4E00BE1B3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1580,13 +1545,6 @@
 				265DAC641A399D4E00BE1B3B /* ViewController.m in Sources */,
 				265DAC611A399D4E00BE1B3B /* AppDelegate.m in Sources */,
 				265DAC5E1A399D4E00BE1B3B /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		265DAC6D1A399D4E00BE1B3B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1667,13 +1625,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		265DADF91A399FB200BE1B3B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		265DAE121A399FCC00BE1B3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1750,13 +1701,6 @@
 				265DAEA81A39A50100BE1B3B /* TComPicYuv.cpp in Sources */,
 				265DAE3B1A39A29500BE1B3B /* pixdesc.c in Sources */,
 				2697E6C71A4098080092DC9B /* golomb.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		265DAE1C1A399FCD00BE1B3B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1917,30 +1861,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		265DAC731A399D4E00BE1B3B /* PBXTargetDependency */ = {
+		16E127BD1DED8C63003F0E1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 265DAC581A399D4E00BE1B3B /* libbpg demo */;
-			targetProxy = 265DAC721A399D4E00BE1B3B /* PBXContainerItemProxy */;
-		};
-		265DAE001A399FB200BE1B3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 265DADF21A399FB100BE1B3B /* libbpgdec_ios */;
-			targetProxy = 265DADFF1A399FB200BE1B3B /* PBXContainerItemProxy */;
-		};
-		265DAE021A399FB200BE1B3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 265DAC581A399D4E00BE1B3B /* libbpg demo */;
-			targetProxy = 265DAE011A399FB200BE1B3B /* PBXContainerItemProxy */;
+			target = 16E127B61DED8C63003F0E1E /* libbpghelper */;
+			targetProxy = 16E127BC1DED8C63003F0E1E /* PBXContainerItemProxy */;
 		};
 		265DAE091A399FB200BE1B3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 265DADF21A399FB100BE1B3B /* libbpgdec_ios */;
 			targetProxy = 265DAE081A399FB200BE1B3B /* PBXContainerItemProxy */;
-		};
-		265DAE231A399FCD00BE1B3B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 265DAE151A399FCC00BE1B3B /* libbpgenc_ios */;
-			targetProxy = 265DAE221A399FCD00BE1B3B /* PBXContainerItemProxy */;
 		};
 		269FFB501A48CE8700EBC867 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1974,6 +1903,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		16E127C11DED8C63003F0E1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8WEA55D565;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = libbpghelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.iuact.libbpghelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		16E127C21DED8C63003F0E1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8WEA55D565;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = libbpghelper/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.iuact.libbpghelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		261FE6BC1A399CA000483851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2086,9 +2073,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WEA55D565;
 				INFOPLIST_FILE = "libbpg demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2098,39 +2086,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8WEA55D565;
 				INFOPLIST_FILE = "libbpg demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
-		265DAC7D1A399D4E00BE1B3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "libbpg demoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libbpg demo.app/libbpg demo";
-			};
-			name = Debug;
-		};
-		265DAC7E1A399D4E00BE1B3B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "libbpg demoTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libbpg demo.app/libbpg demo";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -2176,34 +2135,6 @@
 			};
 			name = Release;
 		};
-		265DAE101A399FB200BE1B3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = libbpgdec_iosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libbpg demo.app/libbpg demo";
-			};
-			name = Debug;
-		};
-		265DAE111A399FB200BE1B3B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = libbpgdec_iosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/libbpg demo.app/libbpg demo";
-			};
-			name = Release;
-		};
 		265DAE281A399FCD00BE1B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2231,32 +2162,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		265DAE2B1A399FCD00BE1B3B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = libbpgenc_iosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		265DAE2C1A399FCD00BE1B3B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = libbpgenc_iosTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -2382,6 +2287,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		16E127C01DED8C63003F0E1E /* Build configuration list for PBXNativeTarget "libbpghelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16E127C11DED8C63003F0E1E /* Debug */,
+				16E127C21DED8C63003F0E1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		261FE6A21A399CA000483851 /* Build configuration list for PBXProject "libbpg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2400,15 +2313,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		265DAC7C1A399D4E00BE1B3B /* Build configuration list for PBXNativeTarget "libbpg demoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				265DAC7D1A399D4E00BE1B3B /* Debug */,
-				265DAC7E1A399D4E00BE1B3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		265DAE0C1A399FB200BE1B3B /* Build configuration list for PBXNativeTarget "libbpgdec_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2418,29 +2322,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		265DAE0F1A399FB200BE1B3B /* Build configuration list for PBXNativeTarget "libbpgdec_iosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				265DAE101A399FB200BE1B3B /* Debug */,
-				265DAE111A399FB200BE1B3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		265DAE271A399FCD00BE1B3B /* Build configuration list for PBXNativeTarget "libbpgenc_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				265DAE281A399FCD00BE1B3B /* Debug */,
 				265DAE291A399FCD00BE1B3B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		265DAE2A1A399FCD00BE1B3B /* Build configuration list for PBXNativeTarget "libbpgenc_iosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				265DAE2B1A399FCD00BE1B3B /* Debug */,
-				265DAE2C1A399FCD00BE1B3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

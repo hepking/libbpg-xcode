@@ -285,7 +285,7 @@
 typedef       void                Void;
 typedef       bool                Bool;
 
-#if defined(__arm__) && !defined(__APPLE__)
+#ifdef __arm__
 typedef       signed char         Char;
 #else
 typedef       char                Char;

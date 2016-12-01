@@ -103,8 +103,7 @@ class Decoder{
     
 public:
     Decoder(const uint8_t *buffer, int length)
-    : _colorSpace(CG::ColorSpace::CreateDeviceRGB())
-    , _context(bpg_decoder_open())
+    : _colorSpace(CG::ColorSpace::CreateDeviceRGB()),  _context(bpg_decoder_open())
 #if TARGET_OS_IPHONE
     , _imageScale([UIScreen mainScreen].scale)
 #endif
@@ -112,14 +111,17 @@ public:
         if (!this->_context) {
             throw "bpg_decoder_open";
         }
+        
         if (bpg_decoder_decode(this->_context, buffer, length) != 0) {
             bpg_decoder_close(this->_context);
             throw "bpg_decoder_decode";
         }
+        
         if (bpg_decoder_get_info(this->_context, &this->_imageInfo) != 0) {
             bpg_decoder_close(this->_context);
             throw "bpg_decoder_get_info";
         }
+        
         this->_imageLineSize = (this->_imageInfo.has_alpha ? 4 : 3) * this->_imageInfo.width;
         this->_imageTotalSize = this->_imageLineSize * this->_imageInfo.height;
     }
@@ -140,6 +142,7 @@ public:
         if (bpg_decoder_start(this->_context, fmt) != 0) {
             throw "bpg_decoder_start";
         }
+        
         if (!this->_imageInfo.has_animation) {
             return this->cgImageToCOImage(*this->getCurrentFrameCGImage());
         }
@@ -151,9 +154,10 @@ public:
         
         // 获取每一帧图片
         std::vector<FrameInfo> infos;
+        
         do {
             int num, den;
-            bpg_decoder_get_frame_duration(this->_context, &num, &den);
+            bpg_decoder_get_frame_duration(this->_context, &num, &den); //获取一帧的延时
             infos.push_back({
                 this->getCurrentFrameCGImage(),
                 (NSTimeInterval)num / den
@@ -205,6 +209,7 @@ private:
     BPGImageInfo _imageInfo;
     size_t _imageLineSize;
     size_t _imageTotalSize;
+    
 #if TARGET_OS_IPHONE
     CGFloat _imageScale;
 #endif
@@ -214,10 +219,12 @@ private:
         delete[] (uint8_t *)data;
     }
     
+    // 获取当前帧的内容
     uint8_t *getCurrentFrameBuffer() const
     {
         uint8_t *buffer = new uint8_t[this->_imageTotalSize];
-        for (int y = 0; y < this->_imageInfo.height; ++y) {
+        for (int y = 0; y < this->_imageInfo.height; ++y)
+        {
             if (bpg_decoder_get_line(this->_context, buffer + (y * this->_imageLineSize)) == 0) {
                 continue;
             }
@@ -227,6 +234,7 @@ private:
         return buffer;
     }
     
+    // 获取当前帧的图片
     std::shared_ptr<CG::Image> getCurrentFrameCGImage() const
     {
         CG::DataProvider provider = CG::DataProvider(nullptr,
@@ -247,6 +255,7 @@ private:
                                            kCGRenderingIntentDefault);
     }
     
+    // cgImage 转 UIImage
     COImage *cgImageToCOImage(const CG::Image &image) const
     {
 #if TARGET_OS_IPHONE
